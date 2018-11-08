@@ -1,0 +1,56 @@
+<view>
+  <view class='content-item'>
+    <view class='item-header'>发布者</view>
+    <view class='item-body item1'>
+      <image src='../../images/home_icon_content.png' mode='aspectFill'></image>
+      <view class='right-box'>
+        <view class='r-title'>{{detail.title}}</view>
+        <view class='zan-ellipsis r-sub-title'>{{detail.slogan}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='content-item'>
+    <view class='item-header'>运动信息</view>
+    <view class='item-body item2'>
+      <view class='item-ceil'>
+        <view class='ceil-label'>场地</view>
+        <view class='right-link' bindtap='goMap'>
+          广州奥体
+          <image src='../../images/arrow-r.png' mode='aspectFill'></image>
+        </view>
+      </view>
+      <view class='item-ceil'>
+        <view class='ceil-label'>时间</view>
+        <view class='right-desc'>{{detail.create_time}}</view>
+      </view>
+      <view class='item-ceil'>
+        <view class='ceil-label'>费用</view>
+        <view class='right-desc'>{{detail.cost}}</view>
+      </view>
+      <view class='item-ceil'>
+        <view class='ceil-label'>人数</view>
+        <view class='right-desc'>{{detail.number_limit}}</view>
+      </view>
+      <view class='item-ceil'>
+        <view class='ceil-label'>联系方式</view>
+        <view class='right-desc'>{{detail.phone}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='content-item'>
+    <view class='item-header'>参与者</view>
+    <view class='item-body item3'>
+      <view class='item3-title'>人数：{{detail.entry_counts}}/{{detail.number_limit}}</view>
+      <view class='image-list'>
+        <image wx:for="{{detail.entry_users}}" src='{{item.head_img}}' mode='aspectFill'></image>
+      </view>
+    </view>
+  </view>
+
+  <button wx:if="{{detail.status == '未报名'}}" class='yellow-btn' hover-class='yellow-button-class' bindtap='join'>加入运动</button>
+   <button wx:if="{{detail.status == '已报名'}}" bindtap='exist' class='yellow-btn' hover-class='yellow-button-class'>退出运动</button>
+    <button wx:if="{{detail.status == '进行中'}}" class='yellow-btn' hover-class='yellow-button-class' disabled='{{true}}'>正在进行</button>
+     <button wx:if="{{detail.status == '已结束'}}" disabled='{{true}}' class='yellow-btn' hover-class='yellow-button-class'>运动结束</button>
+</view>

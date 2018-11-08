@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "陪练",
+  "usingComponents": {
+    "coachList": "/components/coachList/coachList"
+  }
+}

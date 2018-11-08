@@ -1,0 +1,66 @@
+swiper {
+  width: 750rpx;
+  height: 542rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  margin-top: -50rpx;
+}
+
+
+
+swiper image {
+  width: 750rpx;
+  height: 542rpx;
+}
+
+.footer-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.footer-btn {
+  width: 33.33%;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: #fff;
+}
+
+.left-btn {
+  float: left;
+}
+
+.left-btn image {
+  width: 30rpx;
+  height: 34rpx;
+  padding-right: 20rpx;
+  vertical-align: middle;
+}
+
+.right-btn {
+  float: right;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 9999;
+}
+
+.right-btn image {
+  width: 56rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  padding-right: 30rpx;
+}

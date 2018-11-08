@@ -1,0 +1,26 @@
+<!--pages/index/index.wxml-->
+<view class='page'>
+<button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取信息</button>
+  <view class='nav-tabar'>
+    <view class="nav-tabar-item {{navItem == 0?'nav-tabar-item-active':''}}" data-navitem="0" bindtap='switchNav'>
+      <text data-navitem="0">约运动</text>
+    </view>
+    <image bindtap='showMask' src='../../images/home_nav_icon1.png' mode='widthFix'></image>
+    <view class="nav-tabar-item {{navItem == 1?'nav-tabar-item-active':''}}" data-navitem="1" bindtap='switchNav'>
+      <text data-navitem="1">运动圈</text>
+    </view>
+  </view>
+  <exerciseList wx:if='{{navItem == 0}}' datas='{{exerciseList}}'></exerciseList>
+  <postList wx:if='{{navItem == 1}}' datas='{{postList}}'></postList>
+</view>
+<!-- mask -->
+<view wx:if="{{showMaskPage}}" class='mask-view' bindtap='showMask'>
+</view>
+<view wx:if="{{showMaskPage}}" class='mask-tabar' bindtap='releaseMovementCircle'>
+  <view class='triangle-top'>
+  </view>
+  <view class='mask-tabar-background'>
+    <text class='mask-tabar-item' bindtap='releaseMovement'>发布运动</text>
+    <text class='mask-tabar-item' bindtap='releaseRunCircle'>发布运动圈</text>
+  </view>
+</view>

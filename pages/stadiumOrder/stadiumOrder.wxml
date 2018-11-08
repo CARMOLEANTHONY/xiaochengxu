@@ -1,0 +1,46 @@
+<view>
+  <view class='header_title'>
+    <view class='stadium_name'>{{detail.name}}</view>
+    <view class='order_date'>{{orderDate}}</view>
+  </view>
+  <view wx:if='{{detail.fields.length > 0}}'>
+    <view class='order_item'>
+      <view class='item_title'>预约场地</view>
+      <view class='item_body item_select'>
+        <view class='left-c'>
+          <view class='left-item {{currentIndex == index ? "is_active": ""}}' wx:for='{{detail.fields}}' wx:key='{{index}}' data-index='{{index}}' bindtap='toggleStadium'>
+            {{item.field_name}}
+          </view>
+        </view>
+        <view class='right-c'>
+          <view wx:for='{{currentList[currentIndex].price_list}}' wx:for-index="c_index" wx:for-item="c_item" class='select-item {{c_item.isSelect?"is_select":""}}' bindtap='addSelect' data-index='{{c_index}}'>
+            <view>{{c_item.time}}</view>
+            <view class='item_price'>{{c_item.price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='order_item'>
+      <view class='item_title'>已选</view>
+      <view class='item_body' wx:if='{{selectedList.length > 0}}'>
+        <view wx:for='{{selectedList}}' wx:for-index="s_index" wx:for-item="s_item" class='is_select selected_item' data-index='{{s_index}}'>
+          <view>{{s_item.name}}</view>
+          <view class='item_price'>{{s_item.time}}</view>
+          <view class='delete-item' bindtap='deleteItem' data-index='{{s_index}}'>
+            <view></view>
+          </view>
+        </view>
+      </view>
+      <view class='item_body no-data' wx:else>请选择预约场地</view>
+    </view>
+    <view class='order_item'>
+      <view class='item_title'>总计</view>
+      <view class='item_body no-data'>
+          总计：
+          <text class='red-style'>{{cost}}</text>元
+      </view>
+    </view>
+  </view>
+  <view wx:else class='empty_style'>此时间段暂无可预约的场馆</view>
+  <button wx:if='{{detail.fields.length > 0}}' class='yellow-btn' hover-class='yellow-button-class' bindtap='goPay'>支付</button>
+</view>

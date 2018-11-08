@@ -1,0 +1,4 @@
+image {
+  margin-top: 20rpx;
+  width: 100%;
+}

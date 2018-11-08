@@ -1,0 +1,12 @@
+<view class='nav-box'>
+  <view class='nav-item {{navItem == "0"? "nav-item-active": ""}}' data-nav-Item="0" bindtap='switchNav'>
+    <text>未开始</text>
+  </view>
+  <view class='nav-item {{navItem == "1"? "nav-item-active": ""}}' data-nav-Item="1" bindtap='switchNav'>
+    <text>正在进行</text>
+  </view>
+  <view class='nav-item {{navItem == "2"? "nav-item-active": ""}}' data-nav-Item="2" bindtap='switchNav'>
+    <text>已结束</text>
+  </view>
+</view>
+<coachList datas='{{list}}'></coachList>

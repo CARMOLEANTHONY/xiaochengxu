@@ -1,0 +1,14 @@
+<view>
+  <swiper bindchange='swiperChangeHandler' current='{{currentImageIndex}}'>
+    <block wx:for="{{swiperItem}}" wx:key='{{index}}'>
+      <swiper-item>
+        <image src="{{item.imageSrc}}" data-image-index='{{index}}' bindtap='previewImage'/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='footer-link'>
+    <view class='left-btn footer-btn' bindtap='goHome'><image src='/images/goHome.png'></image>首页</view>
+    <view class='left-btn footer-btn' bindtap='downloadHandler'><image src='/images/download.png'></image>下载</view>
+    <view class='right-btn footer-btn' bindtap='shareHandler'><image src='/images/share.png'></image>分享<button open-type='share'></button></view>  
+  </view>
+</view>

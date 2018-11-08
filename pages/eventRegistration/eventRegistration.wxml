@@ -1,0 +1,73 @@
+<view class='list-group-nav'>
+  赛事
+</view>
+<view>
+  <view class='rank-item' bindtap='tapEventDetails'>
+    <image src='../../images/rank_logo.png' mode='widthFix'></image>
+    <view class='rank-content'>
+      <text class='zan-ellipsis'>广州天河区春季运动会</text>
+      <text class='zan-ellipsis'>项目: 急速竞速</text>
+      <text class='zan-ellipsis'>时间: 2018/02/08 18:30</text>
+      <text class='zan-ellipsis'>地点: 广州天河区奥体</text>
+    </view>
+  </view>
+</view>
+<view class='list-group-nav'>
+  报名信息
+</view>
+<view wx:if='{{isGroup}}'>
+  <view class='list-item'>
+    <text>团队报名</text>
+    <input type='text' placeholder='输入名称' bindinput="nameHandler"></input>
+  </view>
+  <view class='list-item'>
+    <text>团队人数</text>
+    <input type='number' placeholder='最多输入{{max}}人' bindinput="countHandler"></input>
+  </view>
+  <view class='list-item'>
+    <text>责任人</text>
+    <input type='text' placeholder='输入姓名' bindinput="leaderHandler"></input>
+  </view>
+  <view class='list-item'>
+    <text>证件类型</text>
+    <text>身份证</text>
+  </view>
+  <view class='list-item'>
+    <text>证件号码</text>
+    <input type='idcard' placeholder='输入责任人证件号码' bindinput="idNumHandler"></input>
+  </view>
+</view>
+<view wx:else>
+  <view class='list-item'>
+    <text>个人名称</text>
+    <input type='text' placeholder='输入姓名' bindinput="personalNameHandler"></input>
+  </view>
+  <view class='list-item'>
+    <text>证件类型</text>
+    <text>身份证</text>
+  </view>
+  <view class='list-item'>
+    <text>证件号码</text>
+    <input type='text' placeholder='输入责任人证件号码' bindinput="personalIdHandler"></input>
+  </view>
+</view>
+<view class='list-group-nav'>
+  报名赛事
+</view>
+<view>
+  <view class='choose-list-item' wx:for='{{projects}}'>
+    <image src='{{item.isCheck ? "/images/choose-select.png" : "/images/choose-def.png"}}' mode='widthFix' bindtap='toggleChecked'  data-index='{{index}}'></image>
+    <text>{{item.name}}</text>
+    <text>{{item.brief}}</text>
+    <text>{{item.price}}元/人</text>
+  </view>
+</view>
+<view class='list-group-nav'>
+  赛事费用
+</view>
+<view class='total-cost'>
+  <text>合计费用:</text>
+  <text>{{totalMoney}}元</text>
+</view>
+
+<button class='footer-button' bindtap="submit">提交报名单</button>

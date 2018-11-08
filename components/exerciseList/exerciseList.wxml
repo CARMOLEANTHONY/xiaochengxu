@@ -1,0 +1,21 @@
+<view class='list-run-view'>
+  <view class='list-run-view-item' bindtap='goToPage' wx:for='{{datas}}' wx:for-index='index' wx:for-item='item' wx:key='index' data-index="{{item.id}}">
+    <view class='list-run-head'>
+      <image src='{{item.head_img}}' mode='aspectFill'></image>
+      <view class='list-run-head-content'>
+        <text class='zan-ellipsis list-run-view-item-title'>{{item.title}}</text>
+        <text class='zan-ellipsis list-run-view-item-content'>{{item.slogan}}</text>
+      </view>
+      <text class='list-run-head-label'>{{item.sport_type}}</text>
+    </view>
+    <view class='list-run-footer'>
+      <view class='zan-ellipsis'>开始: {{item.create_time}}</view>
+      <view class='zan-ellipsis'>结束: {{item.end_time}}</view>
+      <view class='zan-ellipsis'>地点: {{item.address}}</view>
+      <view class='zan-ellipsis'>费用: {{item.cost}}
+        <text style='float: right'>共{{item.number_limit}}人/缺{{item.number_limit - item.entry_counts}}人</text>
+      </view>
+      <button type='default' hover-class="other-button-hover">{{item.status}}</button>
+    </view>
+  </view>
+</view>

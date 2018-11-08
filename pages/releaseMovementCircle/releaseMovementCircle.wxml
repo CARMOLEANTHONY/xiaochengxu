@@ -1,0 +1,20 @@
+<!--pages/releaseMovementCircle/releaseMovementCircle.wxml-->
+<text class='nav-title'>运动信息</text>
+<view class="section">
+  <input placeholder="输入标题" value='{{titleValue}}' bindinput='titleBlur'/>
+</view>
+<text class='nav-title'>内容</text>
+<view class="section">
+  <textarea placeholder="输入内容" value='{{contentValue}}' bindinput='contentBlur'/>
+</view>
+<text class='nav-title'>图片</text>
+<view class='images-box'>
+  <view class='images-item' wx:for='{{imageList}}'>
+     <image class='choose-images' src='{{item.path}}' data-image-index='{{index}}' mode="aspectFill" bindtap='previewImage'></image>
+     <image class='del-images' src='../../images/del_images.png' mode="scaleToFill" bindtap='deleteImageItem' data-image-index='{{index}}'></image>
+  </view>
+  <view class='images-item' wx:if='{{imageList.length < 4}}'>
+     <image class='add-images' src='../../images/add_images.png' mode="scaleToFill" bindtap='uploadImage'></image>
+  </view>
+</view>
+<button class='yellow-btn' hover-class='yellow-button-class' bindtap='release'>发布</button>

@@ -1,0 +1,101 @@
+.content-item .item-header {
+  height: 90rpx;
+  line-height: 90rpx;
+  text-indent: 34rpx;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+.content-item .item-body {
+  background-color: #fff;
+}
+
+.r-title {
+  color: #4a4a4a;
+}
+
+.r-sub-title {
+  color: #888;
+}
+
+.item1 {
+  height: 200rpx;
+  padding-left: 220rpx;
+  position: relative;
+}
+
+.item1 image {
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 30rpx;
+  transform: translateY(-50%);
+}
+
+.item1 .right-box {
+  width: 100%;
+  padding: 40rpx 0;
+  box-sizing: border-box;
+}
+
+.item1 .right-box view {
+  font-size: 34rpx;
+  line-height: 60rpx; 
+}
+
+.item2 {
+  padding-left: 30rpx;
+  color: #888888;
+  box-sizing: border-box;
+}
+
+.item2 .item-ceil {
+  border-bottom: 1px solid #E5E5E5;
+  height: 92rpx;
+  line-height: 92rpx;
+  padding-right: 26rpx;
+  padding-left: 226rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.item2 .item-ceil .right-link {
+  float: right;
+  height: 92rpx;
+}
+
+.right-link image {
+  width: 16rpx;
+  height: 28rpx;
+  margin-left: 22rpx;
+}
+
+.item2 .item-ceil .ceil-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #000;
+  font-size: 34rpx;
+}
+
+.item3 {
+  height: 240rpx;
+  padding-left: 30rpx;
+}
+
+.item3-title {
+  font-size: 28rpx;
+  color: #888;
+  line-height: 88rpx;
+}
+
+.image-list image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 4rpx;
+}

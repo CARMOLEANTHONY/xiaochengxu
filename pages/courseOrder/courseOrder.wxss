@@ -1,0 +1,106 @@
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.course-list {
+  margin-top: 20rpx;
+}
+
+.list-item {
+  height: 316rpx;
+  padding-left: 242rpx;
+  position: relative;
+  margin-bottom: 2px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.list-item>image {
+  width: 242rpx;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.list-item>.right-content {
+  width: 100%;
+  height: 100%;
+  padding: 32rpx;
+}
+
+.list-item>.right-content>view {
+  overflow: hidden;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+
+.blue-style {
+  color: #4ba5ff;
+}
+
+.orange-style {
+  color: #fff;
+  background-color: #f7b64b;
+  padding: 0 5px;
+  border-radius: 3px;
+  line-height: 40rpx;
+}
+
+.green-style {
+  color: #7ed321;
+}
+
+.fr {
+  float: right;
+}
+
+.block-item {
+}
+
+.title {
+  padding: 0 20rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #888;
+}
+
+.item-list {
+  background-color: #fff;
+  padding-left: 20rpx;
+}
+
+.item {
+  padding-left: 180rpx;
+  border-bottom: 1px solid #e5e5e5;
+  height: 90rpx;
+  line-height: 90rpx;
+  position: relative;
+}
+
+.item-left-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180rpx;
+  color: #000;
+  font-size: 34rpx;
+}
+
+.item-right-content {
+  color: #000;
+  font-size: 34rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.item-right-content input {
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.item-right-content picker, .picker {
+   height: 90rpx;
+  line-height: 90rpx;
+}

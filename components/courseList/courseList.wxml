@@ -1,0 +1,21 @@
+<view class='{{needTop?"course-list": ""}}'>
+  <view wx:if='{{datas.length > 0}}' class='list-item' wx:for='{{datas}}' wx:for-index='index' wx:for-item='item' wx:key='{{index}}' bindtap='goDetails' data-id='{{item.id}}'>
+    <image src='{{item.headimg}}'></image>
+    <view class='right-content'>
+      <view class='ellipsis'>
+        <text class='blue-style'>{{item.name}}</text>
+        <text class='orange-style fr'>{{item.type_label}}</text>
+      </view>
+      <view class='ellipsis'>
+        <text>已报：{{item.total_enters}} / {{item.max_enroll_num}}</text>
+        <text class='green-style fr '>{{item.price}}/人</text>
+      </view>
+      <view class='ellipsis'>
+        <text>时间：{{item.start_time}}</text>
+      </view>
+      <view class='ellipsis'>
+        <text>地点：{{item.address}}</text>
+      </view>
+    </view>
+  </view>
+</view>

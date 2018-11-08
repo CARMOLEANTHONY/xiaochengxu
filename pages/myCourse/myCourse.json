@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的课程",
+  "usingComponents": {
+    "eventList": "/components/eventList/eventList",
+    "courseList": "/components/courseList/courseList"
+  }
+}

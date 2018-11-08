@@ -1,0 +1,1 @@
+<eventList datas='{{list}}' bind:emitNavItem='navItemHandler'></eventList>

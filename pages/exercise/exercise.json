@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发布运动圈",
+  "usingComponents": {
+    "courseList": "/components/courseList/courseList"
+  }
+}

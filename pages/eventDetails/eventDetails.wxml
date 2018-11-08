@@ -1,0 +1,79 @@
+<view class='nav-content-images'>
+  <image src='{{eventDetail.banner_image}}' mode='scaleToFill'></image>
+  <navigator url='../eventRegistration/eventRegistration?id={{id}}&eventType={{eventDetail.game_type_label == "个人" ? 0 : 1}}&max={{eventDetail.max_enroll_num}}' wx:if='{{currentStatus == 0}}'>
+    <button class='button2'>立即报名</button>
+  </navigator>
+  <navigator url='../eventRegistration/eventRegistration?id={{id}}&eventType={{eventDetail.game_type_label == "个人" ? 0 : 1}}&max={{eventDetail.max_enroll_num}}'>
+    <button class='button2'>立即报名</button>
+  </navigator>
+</view>
+<view class='nav-tabar'>
+  <view class='nav-tabar-item {{currentStatus == 0 ? "nav-tabar-item-color-active": ""}}'>
+    <image class='nav-tabar-item-images' src='../../images/eventDetails-item-01.png'></image>
+    <text class='nav-tabar-item-title '>报名开始</text>
+    <text class='nav-tabar-item-date'>{{eventDetail.deadline}}</text>
+  </view>
+  <view class='nav-tabar-item {{currentStatus == 1 ? "nav-tabar-item-color-active": ""}}'>
+    <image class='nav-tabar-item-images' src='../../images/eventDetails-item-02.png'></image>
+    <text class='nav-tabar-item-title'>报名截止</text>
+    <text class='nav-tabar-item-date'>{{eventDetail.enroll_start_date}}</text>
+  </view>
+  <view class='nav-tabar-item {{currentStatus == 2 ? "nav-tabar-item-color-active": ""}}'>
+    <image class='nav-tabar-item-images' src='../../images/eventDetails-item-03.png'></image>
+    <text class='nav-tabar-item-title'>比赛开始</text>
+    <text class='nav-tabar-item-date'>{{eventDetail.start_time}}</text>
+  </view>
+  <view class='nav-tabar-item {{currentStatus == 3 ? "nav-tabar-item-color-active": ""}}'>
+    <image class='nav-tabar-item-images' src='../../images/eventDetails-item-04.png'></image>
+    <text class='nav-tabar-item-title'>比赛结束</text>
+    <text class='nav-tabar-item-date'>{{eventDetail.end_time}}</text>
+  </view>
+</view>
+<view class='list mt'>
+  <view class='list-cell'>
+    <text>报名查询</text>
+    <image src='../../images/arrow-r.png' mode='widthFix'></image>
+  </view>
+  <view class='list-cell'>
+    <navigator url="{{'/pages/eventImage/eventImage?id=' + id}}">
+      <text>赛事图片</text>
+      <image src='../../images/arrow-r.png' mode='widthFix'></image>
+    </navigator>
+  </view>
+  <view class='list-cell'>
+    <navigator url="{{'/pages/eventVideo/eventVideo?id=' + id}}">
+      <text>赛事视频</text>
+      <image src='../../images/arrow-r.png' mode='widthFix'></image>
+    </navigator>
+  </view>
+  <view class='list-cell'>
+    <navigator url="/pages/eventResult/eventResult">
+      <text>赛事结果</text>
+      <image src='../../images/arrow-r.png' mode='widthFix'></image>
+    </navigator>
+  </view>
+  <view class='list-cell'>
+    <text>赛事类型</text>
+    <text style='float: right'>{{eventDetail.game_type_label}}</text>
+  </view>
+</view>
+<view class='list-nav-cell'>
+  <text>赛事项目</text>
+</view>
+<view class='list' wx:if="{{eventDetail.projects.length > 0}}">
+  <view class='list-cell' wx:for='{{eventDetail.projects}}'>
+    <text>{{item.name}}</text>
+    <text>{{item.brief}}</text>
+  </view>
+</view>
+<view wx:else class='no-p'>
+    暂无项目
+  </view>
+<view class='list-nav-cell'>
+  <text>赛事详情</text>
+</view>
+<view class='list-content'>
+  <text class='list-content-nav'>{{eventDetail.title}}</text>
+  <import src='/wxParse/wxParse.wxml' />
+  <template is='wxParse' data='{{wxParseData: content.nodes}}' />
+</view>

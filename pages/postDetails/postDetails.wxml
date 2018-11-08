@@ -1,0 +1,36 @@
+<view class='page'>
+  <view class='nav-head'>
+    <image class='nav-head-icon' src='{{postDetail.head_img}}' mode='aspectFill'></image>
+    <view class='nav-head-content'>
+      <text>{{postDetail.user_name}}</text>
+      <text>发布时间: {{postDetail.create_time}}</text>
+    </view>
+  </view>
+  <view class='nav-content'>
+    <view class='nav-content-head'>
+      <text>{{postDetail.title}}</text>
+    </view>
+    <view class='nav-content-details'>
+      {{postDetail.content}}
+      <image wx:if='{{postDetail.images.length > 0}}' wx:for='{{postDetail.images}}' src='{{item.src}}' mode='withdFix'></image>
+      <image src='../../images/image2.png' mode='withdFix'></image>
+    </view>
+    <view class='nav-content-footer'>
+      <button bindtap='addLike'>
+        <image src='../../images/praise.png' mode='withdFix'></image>
+        <text>{{postDetail.like_num}}</text>
+      </button>
+    </view>
+  </view>
+  <view class='border-10'>
+  </view>
+ <commentList needLike='{{true}}' datas='{{postDetail.comments}}' bind:updateData='updateData'></commentList>
+  <view class="section">
+    <navigator url='{{"/pages/comment/comment?postId=" + postDetail.id + "&parentId=" + postDetail.id}}'>
+      <input placeholder="发布评论..." disabled placeholder-style='font-size: 26rpx; color: #b2b2b2' />
+    </navigator>
+    <image src='../../images/talk.png' mode='withdFix'></image>
+    <text class='section-lable'>{{postDetail.comment_num > 99 ? '99+': postDetail.comment_num}}</text>
+    <button hover-class='other-button-class' bindtap='report'>举报</button>
+  </view>
+</view>

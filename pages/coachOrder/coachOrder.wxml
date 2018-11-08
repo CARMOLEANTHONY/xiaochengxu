@@ -1,0 +1,88 @@
+<view class='partner-list'>
+  <view class='list-item' bindtap='goDetail' data-id="{{detail.id}}">
+    <view class='left-content'>
+      <image src='{{detail.head_img}}' mode='scallToFill'></image>
+      <view wx:if='{{detail.status == 20}}'>
+        <image src='/images/AUTH.png'></image>已认证</view>
+    </view>
+    <view class='right-content'>
+      <view class='black-style'>{{detail.user_name}}
+        <text class='fr green-style'>{{detail.min_price}}元/小时</text>
+      </view>
+      <view class='ellipsis'>专业：{{detail.professionals}}</view>
+      <view class='ellipsis'>简介：{{detail.desc}}</view>
+    </view>
+  </view>
+</view>
+<view class='block-item'>
+  <view class='title'>
+    预约信息
+  </view>
+  <view class='item-list'>
+    <view class='item'>
+      <view class='item-left-content'>名字</view>
+      <view class='item-right-content'>
+        <input placeholder='输入名称' value='{{orderName}}' bindinput='nameHandler'></input>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='item-left-content'>证件类型</view>
+      <view class='item-right-content'>
+        身份证
+      </view>
+    </view>
+    <view class='item'>
+      <view class='item-left-content'>证件号码</view>
+      <view class='item-right-content'>
+        <input placeholder='输入证件号码' value='{{orderID}}' bindinput='IDHandler'></input>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='item-left-content'>联系方式</view>
+      <view class='item-right-content'>
+        <input placeholder='输入联系方式' value='{{orderNumber}}' bindinput='numberHandler'></input>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='block-item'>
+  <view class='title'>
+    教练预约
+  </view>
+  <view class='item-list'>
+    <view class='item'>
+      <view class='item-left-content'>请选择日期</view>
+      <view class='item-right-content'>
+        <picker mode="date" value="{{orderDate}}" placeholder='请选择日期' bindchange="bindDateChange">
+          <view class="picker">
+            {{orderDate}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='item-left-content'>请选择时间</view>
+      <view class='item-right-content'>
+        <picker mode="time" value="{{orderTime}}" placeholder='请选择时间' bindchange="bindTimeChange">
+          <view class="picker">
+            {{orderTime}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='block-item'>
+  <view class='title'>
+    总计费用
+  </view>
+  <view class='item-list'>
+    <view class='item'>
+      <view class='item-left-content'>合计费用</view>
+      <view class='item-right-content red-style'>
+        {{detail.price}}元
+      </view>
+    </view>
+  </view>
+</view>
+<button class='yellow-btn' hover-class='yellow-button-class' bindtap='goOrder'>提交预约</button>

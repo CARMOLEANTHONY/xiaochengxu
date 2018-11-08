@@ -1,0 +1,55 @@
+<!--pages/me/me.wxml-->
+<view>
+  <view class='user-info-box'>
+    <image src='{{userInfo.avatarUrl}}' mode='scallToFill'></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+
+  <view class='link-list-box'>
+    <view class='link-list-title'>我的运动</view>
+    <view class='link-list'>
+      <view class='list-item'>
+        <navigator url='/pages/myCourse/myCourse'>
+          <image src='../../images/me/course.png' mode='scallToFill'></image>
+          <text>我的课程</text>
+        </navigator>
+      </view>
+      <view class='list-item'>
+        <navigator url='/pages/myStadium/myStadium'>
+          <image src='../../images/me/stadium.png' mode='scallToFill'></image>
+          <text>我的场馆</text>
+        </navigator>
+      </view>
+      <view class='list-item'>
+        <navigator url='/pages/myCoach/myCoach'>
+          <image src='../../images/me/partner.png' mode='scallToFill'></image>
+          <text>我的陪练</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+   <view class='link-list-box'>
+    <view class='link-list-title'>我的圈子</view>
+    <view class='link-list'>
+      <view class='list-item'>
+        <navigator url='/pages/myEvent/myEvent'>
+          <image src='../../images/me/event.png' mode='scallToFill'></image>
+          <text>我的赛事</text>
+        </navigator>
+      </view>
+      <view class='list-item'>
+        <navigator url='/pages/myExercise/myExercise'>
+          <image src='../../images/me/exercise.png' mode='scallToFill'></image>
+          <text>我的运动</text>
+        </navigator>
+      </view>
+      <view class='list-item'>
+        <navigator url='/pages/myPost/myPost'>
+          <image src='../../images/me/post.png' mode='scallToFill'></image>
+          <text>我的帖子</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

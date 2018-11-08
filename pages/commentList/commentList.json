@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "教练评论",
+  "usingComponents": {
+    "commentList": "/components/commentList/commentList"
+  }
+}

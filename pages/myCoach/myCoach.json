@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的陪练",
+  "usingComponents": {
+    "coachList": "/components/coachList/coachList"
+  }
+}

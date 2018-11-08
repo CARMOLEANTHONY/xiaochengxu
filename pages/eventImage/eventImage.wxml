@@ -1,0 +1,7 @@
+<view class='image-list'>
+  <view class='image-item' wx:for='{{swiperItem}}'>
+    <navigator url="{{'/pages/imagePreview/imagePreview?index=' + index}}">
+      <image src='{{item.image}}'></image>
+    </navigator>
+  </view>
+</view>

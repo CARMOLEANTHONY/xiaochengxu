@@ -1,0 +1,108 @@
+.zan-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list-run-view {
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+
+.list-run-view-item {
+  padding: 24rpx 0;
+  border-bottom: 1px #ebebeb solid;
+}
+
+
+.list-run-view-item:last-child {
+  border: none;
+}
+
+.list-run-head {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  padding: 15px 15px 5px;
+  position: relative;
+}
+
+.list-run-head image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.list-run-head-content {
+  margin-left: 10px;
+  padding-top: 5px;
+  width: 420rpx;
+}
+
+.list-run-head .list-run-view-item-title {
+  display: block;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.list-run-head .list-run-view-item-content {
+  display: block;
+  font-size: 14px;
+  color: #9b9b9b;
+  line-height: 25px;
+}
+
+.list-run-head-label {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #f7a700;
+  font-size: 14px;
+}
+
+.list-run-footer {
+  position: relative;
+  padding: 0 30rpx;
+}
+
+.list-run-footer>view {
+  font-size: 28rpx;
+  color: #B2B2B2;
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+}
+
+.list-run-footer>button {
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+  padding: 0;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #f5a623;
+}
+
+button::after {
+  border: none;
+}
+
+.other-button-hover {
+  background-color: wheat !important;
+}
+
+.list-run-footer-right text {
+  font-size: 14px;
+  color: #000;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}

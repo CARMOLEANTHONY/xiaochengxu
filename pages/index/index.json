@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "圈子",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "postList": "/components/postList/postList",
+    "exerciseList": "/components/exerciseList/exerciseList"
+  }
+}

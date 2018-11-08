@@ -1,0 +1,46 @@
+<view>
+  <view class='header-swiper'>
+    <text>{{swiperItem[currentSwiperIndex].title}}</text>
+    <swiper indicator-dots='{{swiperSetting.indicatorDots}}' indicator-color='{{swiperSetting.indicatorColor}}' indicator-active-color='{{swiperSetting.indicatorActiveColor}}' autoplay='{{swiperSetting.autoplay}}' interval='{{swiperSetting.interval}}' circular='{{circular}}' bindchange='swiperChangeHandler'>
+      <block wx:for="{{detail.images}}" wx:key='{{index}}'>
+        <swiper-item>
+          <image src="{{item}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='nav-box'>
+    <view class='nav-item'>
+      <navigator url='/pages/stadium/stadium'>
+        <image src='/images/exercise/stadium.png'></image>
+        <text>场馆</text>
+      </navigator>
+    </view>
+    <view class='nav-item'>
+      <navigator url='/pages/coach/coach'>
+        <image src='/images/exercise/partner.png'></image>
+        <text>陪练</text>
+      </navigator>
+    </view>
+    <view class='nav-item'>
+      <navigator url='/pages/course/course'>
+        <image src='/images/exercise/course.png'></image>
+        <text>课程</text>
+      </navigator>
+    </view>
+  </view>
+  <view class='list-box partner-box'>
+    <view class='list-title'>陪练推荐</view>
+    <view class='list'>
+      <view class='list-item' wx:for='{{detail.coachs.length > 4 ? detail.coachs.slice(0, 4): detail.coachs}}' bindtap='goCoachDetail' wx:key='{{index}}' data-id='{{item.id}}'>
+          <image src='{{item.head_img}}' class='img1'></image>
+          <image class='img2' wx:if='{{item.status == 20}}' src='/images/exercise/AUTH.png'></image>
+          <text>{{item.user_name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='list-box '>
+    <view class='list-title'>课程推荐</view>
+    <courseList needTop='{{false}}' datas="{{detail.courses}}"></courseList>
+  </view>
+</view>

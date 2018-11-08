@@ -1,0 +1,4 @@
+<view>
+  <textarea placeholder="{{defaultComment}}" placeholder-class='font-size: 34rpx; color: #b2b2b2' value='{{conten}}' bindinput='inputHandler'></textarea>
+  <button bindtap='submit'>发布</button>
+</view>

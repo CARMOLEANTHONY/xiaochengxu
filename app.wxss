@@ -1,0 +1,89 @@
+
+@import 'wxParse/wxParse.wxss';
+
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.green-style {
+  color: #7ED321;
+}
+
+.red-style {
+  color: #EB551B !important;
+}
+
+view {
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #000;
+}
+
+view input {
+  height: 100%;
+}
+
+page {
+  background-color: #efeff4;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.zan-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; 
+}
+
+.yellow-btn {
+  width: 672rpx;
+  margin: 26rpx auto;
+  height: 94rpx;
+  line-height: 94rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #f4b349;
+}
+
+.yellow-button-class {
+  opacity: 0.6;
+}
+
+.no-data-style {
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.t_center {
+  text-align: center;
+}

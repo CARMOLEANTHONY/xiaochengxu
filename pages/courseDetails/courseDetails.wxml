@@ -1,0 +1,35 @@
+<view>
+  <image class='head-img' src='{{courseDetail.headimg}}'></image>
+  <view class='course-info'>
+    <view class='c-name'>{{courseDetail.name}}</view>
+    <view class='c-info'>
+      <text class='orange-style'>{{courseDetail.type_label}}</text>
+      <text class='green-style fr'>{{courseDetail.price}}元/人</text>
+    </view>
+    <view class='c-info zan-ellipsis'>
+      已报：{{courseDetail.total_enters}} / {{courseDetail.max_enroll_num}}
+    </view>
+    <view class='c-info zan-ellipsis'>
+      时间：{{courseDetail.start_time}} 至 {{courseDetail.end_time}}
+    </view>
+    <view class='c-info zan-ellipsis'>
+      地点：{{courseDetail.address}}
+    </view>
+  </view>
+
+  <view bindtap='goCourseComment' class='to-coach'>
+    课程评价
+    <image src='../../images/arrow-r.png' class='a_r fr'></image>
+  </view>
+
+  <view class='c-desc course-info'>
+    <view class='c-name'>课程简介</view>
+    <import src='/wxParse/wxParse.wxml' />
+    <template is='wxParse' data='{{wxParseData: content.nodes}}' />
+  </view>
+
+
+  <button class='yellow-btn' wx:if='{{isTimeout}}' hover-class='yellow-button-class' disabled>已结束报名</button>
+  <button class='yellow-btn' wx:elif='{{courseDetail.max_enroll_num == courseDetail.total_enters}}' hover-class='yellow-button-class' disabled>人数已满</button>
+  <button class='yellow-btn' wx:else hover-class='yellow-button-class' bindtap='goOrder'>报名</button>
+</view>

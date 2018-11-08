@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/exercise/exercise",
+    "pages/me/me",
+    "pages/ranking/ranking",
+    "pages/shopping/shopping",
+    "pages/releaseMovement/releaseMovement",
+    "pages/postDetails/postDetails",
+    "pages/movementDetails/movementDetails",
+    "pages/releaseMovementCircle/releaseMovementCircle",
+    "pages/eventDetails/eventDetails",
+    "pages/eventRegistration/eventRegistration",
+    "pages/myCourse/myCourse",
+    "pages/myStadium/myStadium",
+    "pages/myEvent/myEvent",
+    "pages/myExercise/myExercise",
+    "pages/myPost/myPost",
+    "pages/myCoach/myCoach",
+    "pages/stadium/stadium",
+    "pages/coach/coach",
+    "pages/course/course",
+    "pages/courseOrder/courseOrder",
+    "pages/eventImage/eventImage",
+    "pages/imagePreview/imagePreview",
+    "pages/comment/comment",
+    "pages/eventVideo/eventVideo",
+    "pages/stadiumDetails/stadiumDetails",
+    "pages/stadiumOrder/stadiumOrder",
+    "pages/courseDetails/courseDetails",
+    "pages/eventResult/eventResult",
+    "pages/coachDetail/coachDetail",
+    "pages/commentList/commentList",
+    "pages/coachOrder/coachOrder",
+    "pages/report/report"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f5a623",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#747474",
+    "selectedColor": "#f4b349",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "圈子",
+        "iconPath": "images/tabar_icon01.png",
+        "selectedIconPath": "images/tabar_icon01_s.png"
+      },
+      {
+        "pagePath": "pages/exercise/exercise",
+        "text": "运动",
+        "iconPath": "images/tabar_icon02.png",
+        "selectedIconPath": "images/tabar_icon02_s.png"
+      },
+      {
+        "pagePath": "pages/ranking/ranking",
+        "text": "赛事",
+        "iconPath": "images/tabar_icon03.png",
+        "selectedIconPath": "images/tabar_icon03_s.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "商城",
+        "iconPath": "images/tabar_icon04.png",
+        "selectedIconPath": "images/tabar_icon04_s.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/tabar_icon05.png",
+        "selectedIconPath": "images/tabar_icon05_s.png"
+      }
+    ]
+  }
+}

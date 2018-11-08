@@ -1,0 +1,137 @@
+.header_title {
+  height: 150rpx;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+}
+
+.header_title .stadium_name {
+  font-size: 36rpx;
+  color: #000;
+  line-height: 70rpx;
+}
+
+.header_title .order_date {
+  font-size: 28rpx;
+  color: #888;
+  line-height: 40rpx;
+}
+
+.item_body {
+  background-color: #fff;
+}
+
+.item_select {
+  display: flex;
+}
+
+.item_select .left-c {
+  min-width: 200rpx;
+  border-right: 1px solid #dedede;
+  padding: 40rpx;
+}
+
+.item_select .right-c {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item_title {
+  background-color: transparent;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #888;
+  padding-left: 30rpx;
+}
+
+.left-item {
+  min-width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  margin: 20rpx auto;
+  background-color: #E5E5E5;
+  text-align: center;
+}
+
+.is_active {
+  background-color: #f4b349;
+  color: #fff;
+}
+
+.select-item {
+  height: 60rpx;
+  min-width: 120rpx;
+  border-radius: 30rpx;
+  background-color: #E5E5E5;
+  text-align: center;
+  line-height: 60rpx;
+  padding: 0 20rpx;
+  margin: 20rpx 20rpx;
+}
+
+.select-item view {
+  font-size: 24rpx;
+  line-height: 30rpx
+}
+
+.select-item .item_price {
+  color: #f4b349;
+}
+
+.is_select{
+  background-color: #f4b349;
+}
+
+.is_select view {
+  color: #fff !important;
+  font-size: 24rpx;
+}
+
+.selected_item {
+  display: inline-block;
+  margin: 20rpx 40rpx;
+  position: relative;
+  padding: 0 20rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  overflow: visible;
+}
+
+.delete-item {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #ff0000;
+  border-radius: 10rpx;
+}
+
+.no-data {
+  line-height: 100rpx;
+  padding-left: 30rpx;
+}
+
+
+.delete-item view {
+  width: 16rpx;
+  height: 6rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+
+.empty_style {
+  margin: 40rpx 0;
+  background-color: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  text-align: center;
+}
+

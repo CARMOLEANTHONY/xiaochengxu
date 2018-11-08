@@ -1,0 +1,18 @@
+<view class='page-content-footer' wx:if="{{datas.length > 0}}">
+  <text class='page-content-footer-title'>全部评论</text>
+  <view class='evl-list'>
+    <view wx:for="{{datas}}" class='evl-item'>
+      <image src='{{item.user_info.head_img}}' mode='aspectFill' class='head_img'></image>
+      <view class='gray_style'>{{item.user_info.user_name}}</view>
+      <view class='item_content'>{{item.content}}</view>
+      <view class='time_item'>
+        <view class='fl gray_style'>{{item.create_time}}</view>
+        <view class='fr like_icon' bindtap='addLike' wx:if='{{needLike}}' data-id='{{item.id}}'>
+          <image src='../../images/praise.png' mode='aspectFill'></image>
+          <text class='gray_style'>{{item.like_num}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:else class='page-content-footer-title t_center no-data'>暂无评论</view>

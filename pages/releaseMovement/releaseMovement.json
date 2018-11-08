@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发布运动",
+  "usingComponents": {
+    "dateTimePicker": "/components/dateTimePicker/dateTimePicker"
+  }
+}

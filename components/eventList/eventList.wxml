@@ -1,0 +1,32 @@
+<!--pages/ranking/ranking.wxml-->
+<view class='nav-box'>
+  <view class='nav-item {{navItem == "0"? "nav-item-active": ""}}' data-nav-Item="0" bindtap='switchNav'>
+    <text>未开始</text>
+  </view>
+  <view class='nav-item {{navItem == "1"? "nav-item-active": ""}}' data-nav-Item="1" bindtap='switchNav'>
+    <text>正在进行</text>
+  </view>
+  <view class='nav-item {{navItem == "2"? "nav-item-active": ""}}' data-nav-Item="2" bindtap='switchNav'>
+    <text>已结束</text>
+  </view>
+</view>
+<view class='rank-list' wx:if='{{showDefaultSlot}}'>
+  <view  wx:for='{{datas}}' wx:for-index='index' wx:for-item='item' wx:key='index' class='rank-item' bindtap='goDetails' data-id="{{item.id || 2}}" >
+    <image src='../../images/rank_logo.png' mode='widthFix'></image>
+    <view class='rank-item-left-top-lable {{item.status === "进行中"? "rank-mask-red":""}} {{item.status === "已结束"? "rank-mask-gray":""}}'>
+    </view>
+    <text class='rank-item-left-top-lable-text'>{{item.status}}</text>
+    <view class='rank-content'>
+      <text class='ellipsis item'>{{item.title}}</text>
+      <view class='ellipsis item'><text wx:for="{{item.projects}}" wx:for-index="inx" wx:for-item="briefItem">{{briefItem.brief}} </text></view>
+      <text class='ellipsis item'>{{item.start_time}}</text>
+      <text class='ellipsis item'>{{item.address}}</text>
+    </view>
+  </view>
+  <view wx:if='{{datas.length === 0}}' class='no-data-style'>
+      暂无数据
+  </view>
+</view>
+<view wx:else>
+  <slot></slot>
+</view>

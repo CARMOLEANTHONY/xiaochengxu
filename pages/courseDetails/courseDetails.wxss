@@ -1,0 +1,65 @@
+.head-img {
+  width: 750rpx;
+  height: 400rpx;
+  background-color: #ccc;
+}
+
+.course-info {
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.course-info .c-name {
+  font-size: 40rpx;
+  text-align: center;
+  font-weight: 900;
+  color:  #f7b64b;
+}
+
+.c-info {
+  font-size: 30rpx;
+  color: #000;
+  line-height: 60rpx;
+}
+
+.blue-style {
+  color: #4ba5ff;
+}
+
+.fr {
+  float: right;
+}
+
+.orange-style {
+  color: #fff;
+  background-color: #f7b64b;
+  padding: 0 5px;
+  border-radius: 3px;
+  line-height: 40rpx;
+}
+
+.green-style {
+  color: #7ed321;
+}
+
+.c-desc .c-content {
+  font-size: 28rpx;
+  color: #000;
+  line-height: 40rpx;
+}
+
+.to-coach {
+  margin: 20rpx 0;
+  line-height: 80rpx;
+  height: 80rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+}
+.a_r {
+  height: 80rpx;
+  width: 16rpx;
+  padding: 26rpx 0;
+  box-sizing: border-box;
+}

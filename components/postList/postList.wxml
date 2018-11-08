@@ -1,0 +1,28 @@
+<view>
+  <view class='list-view'>
+    <view class='list-view-item' bindtap='goToPageDetails' wx:for='{{datas}}' data-id='{{item.id}}'>
+      <view class='post list-head'>
+        <text class='list-head-title'>{{item.title}}</text>
+      </view>
+      <view class='list-content'>
+        <view class='list-content-text'>{{item.content}} </view>
+        <view class='list-content-image'>
+          <image wx:if='{{item.image_list.length > 0}}' wx:for='{{item.image_list.length > 3? item.image_list.slice(0, 3): item.image_list}}'></image>
+        </view>
+      </view>
+      <view class='list-footer'>
+        <view>
+          <text class='list-footer-name'>{{item.create_user_info.user_name}}</text>
+          <text class='list-footer-date'>{{item.create_time}}</text>
+        </view>
+        <view class='list-footer-eva'>
+          <image src='../../images/home_eva_icon2.png' mode='widthFix'></image>
+          <text>{{item.like_num > 99? '99+' : item.like_num}}</text>
+        </view>
+        <view class='list-footer-praise'>
+          <image src='../../images/home_praise_icon2.png' mode='widthFix'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

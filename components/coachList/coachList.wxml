@@ -1,0 +1,13 @@
+<view class='partner-list'>
+  <view wx:for='{{datas}}' wx:for-index='index' wx:for-item='item' wx:key='index' class='list-item' bindtap='goDetail' data-id="{{item.id}}">
+    <view class='left-content'>
+      <image src='{{item.head_img}}' mode='scallToFill'></image>
+      <view wx:if='{{item.status == 20}}'><image src='/images/AUTH.png'></image>已认证</view>
+    </view>
+    <view class='right-content'>
+      <view class='black-style'>{{item.user_name}}<text class='fr green-style'>{{item.min_price}}元/小时</text></view> 
+      <view class='ellipsis'>专业：{{item.professionals}}</view>
+      <view class='ellipsis'>简介：{{item.desc}}</view>
+    </view>
+  </view>
+</view>

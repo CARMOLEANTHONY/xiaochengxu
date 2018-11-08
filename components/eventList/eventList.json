@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "zan-loading": "/zan/loading/index"
+  }
+}

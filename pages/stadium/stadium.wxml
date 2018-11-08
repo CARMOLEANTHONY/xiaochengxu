@@ -1,0 +1,8 @@
+<view class='item-box'>
+  <view class='list-item' wx:for='{{stadiumList}}' data-id='{{item.id}}' bindtap='toDetails'>
+    <image src='{{item.headimg}}'></image>
+    <text class='t t1'>{{item.name}}</text>
+    <text class='t t2'>¥300元/小时</text>
+    <text class='t t3'>{{item.address}}</text>
+  </view>
+</view>

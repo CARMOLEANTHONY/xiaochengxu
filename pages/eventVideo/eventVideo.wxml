@@ -1,0 +1,8 @@
+<view class='video-list' wx:if="{{videoSrc.length > 0}}">
+  <view class='video-item' wx:for='{{videoSrc}}'>
+    <video src='{{item.video_src}}' bindplay='playHandler' binderror='errorHandler' poster="{{item.image}}"></video>
+  </view>
+</view>
+<view wx:else class="no-data">
+  暂无数据
+</view>

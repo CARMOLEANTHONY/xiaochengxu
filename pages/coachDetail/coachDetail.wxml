@@ -1,0 +1,27 @@
+<view>
+  <image src='{{detail.head_img}}' class='head_img'></image>
+  <view class='user_info block-list'>
+    <view class='title'>{{detail.user_name}}</view>
+    <view class='item'>
+      <image src='../../images/is_auth.png' class='user_auth'></image>
+      <view class='green-style fr'>{{detail.price}}元/小时</view>
+    </view>
+    <view class='item p_200'>
+      <view class='pre-time'>可预约时间：</view> 周一、周二、周三、周四、周五、周六、周日的上午8:00至9:00和晚上20:00至21:30
+    </view>
+    <view class='item'>
+      专业：
+      <text wx:for="{{detail.coach_rel_ball}}" wx:key="{{index}}">{{item.ball_info}} </text>
+    </view>
+  </view>
+  <view bindtap='goCoachComment' data-id='{{detail.id}}' class='to-coach'>
+    教练评价
+    <image src='../../images/arrow-r.png' class='a_r fr'></image>
+  </view>
+  <view class='block-list'>
+    <view class='title'>教练简介</view>
+    <import src='/wxParse/wxParse.wxml' />
+    <template is='wxParse' data='{{wxParseData: content.nodes}}' />
+  </view>
+  <button class='yellow-btn' hover-class='yellow-button-class' bindtap='goOrder' data-id='{{detail.id}}'>预约</button>
+</view>

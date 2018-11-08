@@ -1,0 +1,3 @@
+<eventList showDefaultSlot='{{false}}' bind:emitNavItem="getNavItem">
+  <ExerciseList datas="{{list}}"></ExerciseList>
+</eventList>
