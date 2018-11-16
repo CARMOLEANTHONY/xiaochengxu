@@ -68,6 +68,9 @@ const API = {
   // 获取课程列表
   getCourseList: `${DOMAIN}Course/get_list`,
 
+  // 获取我的课程列表
+  getMyCourseList: `${DOMAIN}Courserelorder/my_list`,
+
   // 获取课程详情
   getCourseDetail: `${ DOMAIN }Course/info`,
 
@@ -99,8 +102,10 @@ const API = {
   payment: `${DOMAIN}Index/wx_notify_pay`,
 
   // 获取用户id
-  getUserCode: `${DOMAIN}Index/login`
+  getUserCode: `${DOMAIN}Index/login`,
 
+  // 同步微信用户信息
+  syncUserInfo: `${DOMAIN}User/sync_user`
 }
 
 module.exports = API 

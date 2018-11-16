@@ -51,6 +51,12 @@ Page({
         url: '/pages/index/index',
       })
     }, 'POST')
+
+    wx.uploadFile({
+      url: API.createPost,
+      filePath: '',
+      name: '',
+    })
   },
 
   contentBlur(obj) {

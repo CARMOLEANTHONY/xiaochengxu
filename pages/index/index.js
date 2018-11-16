@@ -44,10 +44,7 @@ Page({
     }, 100)
   },
 
-  // 开发使用
-  onGotUserInfo(e){
-    app.globalData.userInfo = e.detail.userInfo
-  },
+  
 
   getExerciseList(page) {
 

@@ -80,7 +80,7 @@
   <view class='content-item'>
     <view class='item-header'>费用说明</view>
     <view class='cost-type'>
-      <textarea placeholder='输入费用说明' value='{{costRemark}}' bindinput='costRemarkHandler'>
+      <textarea placeholder='输入费用说明' bindinput='costRemarkHandler'>
       </textarea>
     </view>
   </view>

@@ -3,9 +3,6 @@
   <navigator url='../eventRegistration/eventRegistration?id={{id}}&eventType={{eventDetail.game_type_label == "个人" ? 0 : 1}}&max={{eventDetail.max_enroll_num}}' wx:if='{{currentStatus == 0}}'>
     <button class='button2'>立即报名</button>
   </navigator>
-  <navigator url='../eventRegistration/eventRegistration?id={{id}}&eventType={{eventDetail.game_type_label == "个人" ? 0 : 1}}&max={{eventDetail.max_enroll_num}}'>
-    <button class='button2'>立即报名</button>
-  </navigator>
 </view>
 <view class='nav-tabar'>
   <view class='nav-tabar-item {{currentStatus == 0 ? "nav-tabar-item-color-active": ""}}'>

@@ -32,7 +32,7 @@ Page({
       costArr: e.currentTarget.dataset.type == '10' ?
         arr[0] ? [false, false] : [true, false] : arr[1] ? [false, false] : [false, true],
       costType: Number(e.currentTarget.dataset.type),
-      cost: e.currentTarget.dataset.type == '10' ? 'AA': ''
+      cost: ''
     })
   },
 
