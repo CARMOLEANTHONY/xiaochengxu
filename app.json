@@ -32,7 +32,8 @@
     "pages/coachDetail/coachDetail",
     "pages/commentList/commentList",
     "pages/coachOrder/coachOrder",
-    "pages/report/report"
+    "pages/report/report",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
