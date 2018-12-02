@@ -7,7 +7,7 @@
     </view>
     <view class='right-content'>
       <view class='black-style'>{{detail.user_name}}
-        <text class='fr green-style'>{{detail.min_price}}元/小时</text>
+        <text class='fr green-style'>{{detail.price}}元/小时</text>
       </view>
       <view class='ellipsis'>专业：{{detail.professionals}}</view>
       <view class='ellipsis'>简介：{{detail.desc}}</view>

@@ -7,7 +7,7 @@
       <view class='green-style fr'>{{detail.price}}元/小时</view>
     </view>
     <view class='item p_200'>
-      <view class='pre-time'>可预约时间：</view> 周一、周二、周三、周四、周五、周六、周日的上午8:00至9:00和晚上20:00至21:30
+      <view class='pre-time'>可预约时间：</view> {{detail.appoint_period}}
     </view>
     <view class='item'>
       专业：

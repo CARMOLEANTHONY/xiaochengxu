@@ -10,8 +10,8 @@ Page({
   data: {
     startTime: '',
     endTime: '',
-    cost: '',
-    costType: 'AA',
+    cost: 'AA',
+    costType: 10,
     costArr: [true, false],
     movementType: '',
     count: '',
@@ -32,7 +32,7 @@ Page({
       costArr: e.currentTarget.dataset.type == '10' ?
         arr[0] ? [false, false] : [true, false] : arr[1] ? [false, false] : [false, true],
       costType: Number(e.currentTarget.dataset.type),
-      cost: ''
+      cost: e.currentTarget.dataset.type == '10' ? 'AA' : '免费'
     })
   },
 
@@ -153,7 +153,7 @@ Page({
       location: this.data.location,
       title: this.data.title,
       slogan: this.data.slogan,
-      cost_type: this.data.costType,
+      cost_type: this.data.costType == 'AA' ? 10 : this.data.costType == '免费' ? 20:  30,
       cost: this.data.cost,
       phone: this.data.phone,
       cost_remark: this.data.costRemark,

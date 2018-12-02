@@ -1,5 +1,5 @@
-const DOMAIN = 'http://39.105.105.6/Api/';
-// const DOMAIN = 'http://jtsport.net/Api/';
+// const DOMAIN = 'http://39.105.105.6/Api/';
+const DOMAIN = 'http://www.etherstudio.cn/Api/';
 
 const API = {
   // 获取token get
@@ -105,7 +105,10 @@ const API = {
   getUserCode: `${DOMAIN}Index/login`,
 
   // 同步微信用户信息
-  syncUserInfo: `${DOMAIN}User/sync_user`
+  syncUserInfo: `${DOMAIN}User/sync_user`,
+
+  // 上传图片
+  uploadImages: `${DOMAIN}Index/upload_file`
 }
 
 module.exports = API 

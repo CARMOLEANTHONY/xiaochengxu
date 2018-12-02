@@ -19,7 +19,6 @@ App({
   ourLogin(){
     wx.login({
       success: res => {
-        console.log(res)
 
         wx.request({
           url: API.getUserCode,
@@ -27,7 +26,6 @@ App({
             code: res.code
           },
           success: res => {
-            console.log(res)
             this.globalData.openId = res.data.datas.openid
             this.globalData.session_key = res.data.datas.session_key
             wx.getUserInfo({
@@ -45,7 +43,6 @@ App({
                     token: this.globalData.token
                   },
                   success: res => {
-                    console.log(res)
                     this.globalData.userId = res.data.datas.id
                   }
                 })

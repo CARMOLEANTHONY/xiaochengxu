@@ -1,5 +1,6 @@
 import API from '../../server/server.js'
 import fetchData from '../../server/fetch.js'
+import { uploadImages} from '../../utils/util.js'
 
 const app = getApp()
 
@@ -36,26 +37,24 @@ Page({
       icon: 'none'
     })
 
-    let params = {
-      create_user: app.globalData.userId,
-      parent_id: 0,
-      origin_post_id: 0,
-      title: this.data.titleValue,
-      content: this.data.contentValue,
-      images: this.data.imageList
-    }
+    let urlList = []
 
-    // 发布api操作
-    fetchData(API.createPost, params, res => {
-      wx.switchTab({
-        url: '/pages/index/index',
-      })
-    }, 'POST')
+    uploadImages(this.data.imageLocalPath, urlList, 0, () => {
+      let params = {
+        create_user: app.globalData.userId,
+        parent_id: 0,
+        origin_post_id: 0,
+        title: this.data.titleValue,
+        content: this.data.contentValue,
+        images: urlList
+      }
 
-    wx.uploadFile({
-      url: API.createPost,
-      filePath: '',
-      name: '',
+      // 发布api操作
+      fetchData(API.createPost, params, res => {
+        wx.switchTab({
+          url: '/pages/index/index',
+        })
+      }, 'POST')
     })
   },
 

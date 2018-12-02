@@ -2,8 +2,8 @@
   <text class='page-content-footer-title'>全部评论</text>
   <view class='evl-list'>
     <view wx:for="{{datas}}" class='evl-item' wx:key='{{index}}'>
-      <image src='{{item.user_info.head_img}}' mode='aspectFill' class='head_img'></image>
-      <view class='gray_style'>{{item.user_info.user_name}}</view>
+      <image src='{{item.head_img}}' mode='aspectFill' class='head_img'></image>
+      <view class='gray_style'>{{item.user_name}}</view>
       <view class='item_content'>{{item.content}}</view>
       <view class='time_item'>
         <view class='fl gray_style'>{{item.create_time}}</view>

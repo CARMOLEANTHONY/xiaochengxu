@@ -12,7 +12,7 @@
     </view>
     <view class='nav-content-details'>
       {{postDetail.content}}
-      <image wx:if='{{postDetail.images.length > 0}}' wx:for='{{postDetail.images}}' src='{{item.src}}' mode='withdFix' wx:key='{{index}}'></image>
+      <image wx:if='{{postDetail.images.length > 0}}' wx:for='{{postDetail.images}}' src='{{item.src}}' mode='withdFix' wx:key='{{index}}' src='{{item}}'></image>
     </view>
     <view class='nav-content-footer'>
       <button bindtap='addLike'>

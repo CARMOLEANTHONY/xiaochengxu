@@ -1,3 +1,5 @@
+const API = require('../server/server.js')
+
 const formatTime = (date, sp = '/') => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -37,9 +39,35 @@ const setStorage = function( key, data) {
   })
 }
 
+const uploadImages = function (imageList, urlList, currentIndex, callback){
+  let len = imageList.length;
+
+  if (len == 0) return callback()
+
+  wx.uploadFile({
+    url: API.uploadImages,
+    filePath: imageList[currentIndex],
+    name: `file`,
+    success: res => {
+      res.data = JSON.parse(res.data)
+      urlList.push(res.data.datas)
+    },
+    complete: () => {
+      ++currentIndex < len ? uploadImages(imageList, urlList, currentIndex, callback) : callback()
+    },
+    fail: err => {
+      wx.showToast({
+        title: '本张图片上传失败，请稍后重试',
+        icon: 'none'
+      })
+    }
+  })
+}
+
 module.exports = {
   formatTime,
   switchNavHandler,
   setStorage,
-  getStorage
+  getStorage,
+  uploadImages
 }

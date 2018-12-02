@@ -1,13 +1,13 @@
 <view>
   <view class='list-view'>
     <view class='list-view-item' wx:for='{{datas}}' wx:key='{{index}}'>
-      <view class='post list-head'>
+      <view class='post list-head' bindtap='goToPageDetails' data-id='{{item.id}}'>
         <text class='list-head-title'>{{item.title}}</text>
       </view>
-      <view class='list-content'>
+      <view class='list-content' bindtap='goToPageDetails' data-id='{{item.id}}'>
         <view class='list-content-text'>{{item.content}} </view>
         <view class='list-content-image'>
-          <image wx:if='{{item.image_list.length > 0}}' wx:for='{{item.image_list.length > 3? item.image_list.slice(0, 3): item.image_list}}' wx:key='{{index}}' ></image>
+          <image wx:if='{{item.image_list.length > 0}}' wx:for='{{item.image_list.length > 3? item.image_list.slice(0, 3): item.image_list}}' wx:key='{{index}}' wx:for-index="idx" wx:for-item="itemName" src='{{itemName}}'></image>
         </view>
       </view>
       <view class='list-footer'>
@@ -19,7 +19,7 @@
           <image src='../../images/home_eva_icon2.png' mode='widthFix'></image>
           <text>{{item.comment_num > 99? '99+' : item.comment_num}}</text>
         </view>
-        <view class='list-footer-praise' bindtap='addLike' data-id='{{item.id}}'>
+        <view class='list-footer-praise' bindtap='addLike' data-id='{{item.id}}' data-index='{{index}}'>
           <image src='../../images/home_praise_icon2.png' mode='widthFix'></image>
           <text>{{item.like_num > 99? '99+' : item.like_num}}</text>
         </view>

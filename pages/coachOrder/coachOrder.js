@@ -28,7 +28,7 @@ Page({
 
       if (res.data.success) {
 
-        res.data.datas.desc = res.data.datas.desc.replace(/<\/?\w*\/?>/g, '')
+        res.data.datas.desc = res.data.datas.desc.replace(/<[^>]+>/g, '')
 
         this.setData({
           detail: res.data.datas
@@ -75,7 +75,7 @@ Page({
       coach_id: this.data.detail.id,
       username: this.data.orderName,
       id_card: this.data.orderID,
-      contract: this.data.orderNumber,
+      contact: this.data.orderNumber,
       book_date: this.data.orderDate,
       book_time: this.data.orderTime,
       create_user_id: app.globalData.userId
@@ -93,7 +93,9 @@ Page({
           }
         })
       }
-    }, 'POST')
+    }, 'POST', {
+        "Content-type": "application/x-www-form-urlencoded"
+    })
   },
 
   nameHandler(e) {

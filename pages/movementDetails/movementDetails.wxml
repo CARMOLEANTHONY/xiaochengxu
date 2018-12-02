@@ -2,7 +2,7 @@
   <view class='content-item'>
     <view class='item-header'>发布者</view>
     <view class='item-body item1'>
-      <image src='../../images/home_icon_content.png' mode='aspectFill'></image>
+      <image src='{{detail.head_img}}' mode='aspectFill'></image>
       <view class='right-box'>
         <view class='r-title'>{{detail.title}}</view>
         <view class='zan-ellipsis r-sub-title'>{{detail.slogan}}</view>
@@ -16,7 +16,7 @@
       <view class='item-ceil'>
         <view class='ceil-label'>场地</view>
         <view class='right-link' bindtap='goMap'>
-          广州奥体
+          {{detail.address}}
           <image src='../../images/arrow-r.png' mode='aspectFill'></image>
         </view>
       </view>

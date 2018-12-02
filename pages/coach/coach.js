@@ -35,8 +35,10 @@ Page({
       limit: 10
     }, res => {
       res.data.datas.list.forEach(item => {
-        item.desc = item.desc.replace(/<\/?\w*\/?>/g, '')
+        item.desc = item.desc.replace(/<[^>]+>/g, '')
       })
+
+      console.log(res.data.datas.list)
 
       this.setData({
         coachList: [...this.data.coachList, ...res.data.datas.list],

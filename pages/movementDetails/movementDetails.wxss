@@ -65,12 +65,20 @@
 .item2 .item-ceil .right-link {
   float: right;
   height: 92rpx;
+  padding-right: 30rpx;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .right-link image {
+  position: absolute;
+  top: 50%;
+  right: 0;
   width: 16rpx;
   height: 28rpx;
-  margin-left: 22rpx;
+  transform: translateY(-50%);
 }
 
 .item2 .item-ceil .ceil-label {

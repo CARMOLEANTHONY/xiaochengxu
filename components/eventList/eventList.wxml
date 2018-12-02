@@ -11,8 +11,8 @@
   </view>
 </view>
 <view class='rank-list' wx:if='{{showDefaultSlot}}'>
-  <view  wx:for='{{datas}}' wx:for-index='index' wx:for-item='item' wx:key='index' class='rank-item' bindtap='goDetails' data-id="{{item.id || 2}}" >
-    <image src='../../images/rank_logo.png' mode='widthFix'></image>
+  <view  wx:for='{{datas}}' wx:for-index='index' wx:for-item='item' wx:key='index' class='rank-item' bindtap='goDetails' data-id="{{item.id}}" >
+    <image src='{{item.head_image}}' mode='widthFix'></image>
     <view class='rank-item-left-top-lable {{item.status === "进行中"? "rank-mask-red":""}} {{item.status === "已结束"? "rank-mask-gray":""}}'>
     </view>
     <text class='rank-item-left-top-lable-text'>{{item.status}}</text>

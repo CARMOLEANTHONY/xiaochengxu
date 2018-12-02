@@ -41,7 +41,6 @@ Page({
   },
 
   goOrder(e){
-    console.log(e)
     wx.navigateTo({
       url: `/pages/stadiumOrder/stadiumOrder?d=${e.currentTarget.dataset.d}&id=${this.data.detail.id}`,
     })
